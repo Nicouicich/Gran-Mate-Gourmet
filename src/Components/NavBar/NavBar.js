@@ -1,8 +1,8 @@
 import React from 'react';
 import './NavBar.css';
-import CartWidget from './CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 
-function NavBar () {
+export default function NavBar () {
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light stroke">
@@ -36,4 +36,3 @@ function NavBar () {
     </>
   )
 }
-export default NavBar;

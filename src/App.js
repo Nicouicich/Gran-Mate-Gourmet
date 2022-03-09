@@ -1,7 +1,7 @@
 import logo from './logo.svg';
 import './App.css';
 import NavBar from './Components/NavBar/NavBar'
-import ItemListContainer from './Components/NavBar/ItemListContainer';
+import ItemListContainer from './Components/ItemListContainer/ItemListContainer';
 function App () {
   /*
   return (
@@ -26,7 +26,7 @@ function App () {
   return (
     <>
       <NavBar />
-      <ItemListContainer />
+      <ItemListContainer mensaje= "Buenas tardes"/>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
