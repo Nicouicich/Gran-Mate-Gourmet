@@ -1,4 +1,4 @@
-import React, {useState } from "react";
+import React, { useEffect, useState } from "react";
 
 export default function ItemCount ({ stock, initial }) {
   const [count, setCount]=useState(parseInt(initial))
@@ -16,29 +16,29 @@ export default function ItemCount ({ stock, initial }) {
   }
 
   const sumCount=() => {
-    if (count===stockRenew)
+    if (count>=stockRenew)
       alert("No se pueden agregar mas unidades que el stock disponible")
     else
       setCount(count+1)
   }
 
-
-  const addCart=() => {
-    // console.log("stock ", stockRenew)
-    setStockRenew(0)
-    // console.log(stockRenew)
-    // console.log("count:", count)
-    // alert("Producto agregado al carrito correctamente")
-
+  useEffect(() => {
     if (stockRenew===0) {
-      setCount(0)
       alert("No queda Stock")
       setDisableBtn(true)
     }
-    else
-      setCount(parseInt(initial))
+    setCount(parseInt(initial))
 
+  }, [stockRenew,initial])
+
+
+  const addCart=() => {
+
+    alert("Producto agregado al carrito correctamente")
+    setStockRenew(stockRenew-count)
   }
+
+
   return (
 
     <>
@@ -53,7 +53,7 @@ export default function ItemCount ({ stock, initial }) {
 
       </div>
       <div>
-        <button onClick={addCart} id="btnCarrito" disabled={disableBtn}>Agregar al Carrito</button>
+        <button onClick={addCart} disabled={disableBtn}>Agregar al Carrito</button>
       </div>
 
     </>
