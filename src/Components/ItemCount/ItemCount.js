@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import '../../Styles/styles.css';
+
 
 export default function ItemCount ({ stock, initial }) {
   const [count, setCount]=useState(parseInt(initial))
@@ -8,33 +10,25 @@ export default function ItemCount ({ stock, initial }) {
 
   const subtractCount=() => {
 
-    if (count===1)
-      alert("El minimo para ingresar al carrito es 0 ")
-    else
+    if (count>1)
       setCount(count-1)
-
   }
 
   const sumCount=() => {
-    if (count>=stockRenew)
-      alert("No se pueden agregar mas unidades que el stock disponible")
-    else
+    if (count<stockRenew)
       setCount(count+1)
   }
 
   useEffect(() => {
-    if (stockRenew===0) {
-      alert("No queda Stock")
+    if (stockRenew===0) 
       setDisableBtn(true)
-    }
+    
     setCount(parseInt(initial))
 
   }, [stockRenew,initial])
 
 
   const addCart=() => {
-
-    alert("Producto agregado al carrito correctamente")
     setStockRenew(stockRenew-count)
   }
 
@@ -43,17 +37,15 @@ export default function ItemCount ({ stock, initial }) {
 
     <>
       <div>
-        <label for=""> Stock actualizado : {stockRenew} </label>
+        <label for=""> Stock: {stockRenew} </label>
       </div>
-      <div>
-        <button onClick={subtractCount}><img src="assets/images/subtract.png" alt="" /></button>
+      <div className="btn-count">
+        <button className="btn btn-outline-secondary rounded-0 btn-sm" onClick={subtractCount}>-</button>
         <label > {count} </label>
-        <button onClick={sumCount}><img src="assets/images/add.png" alt="" /></button>
-
-
+        <button className="btn btn-outline-secondary rounded-0 btn-sm " onClick={sumCount}>+</button>
       </div>
       <div>
-        <button onClick={addCart} disabled={disableBtn}>Agregar al Carrito</button>
+        <button className="btn  btn-success rounded-0" onClick={addCart} disabled={disableBtn}>Agregar al Carrito</button>
       </div>
 
     </>

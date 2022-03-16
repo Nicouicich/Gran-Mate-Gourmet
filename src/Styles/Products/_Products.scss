@@ -1,0 +1,27 @@
+.btn-count {
+  button {
+    margin: 3%;
+  }
+}
+.box-shadow {
+  :hover {
+    box-shadow: 10px 15px 20px 1px rgba(255, 255, 255, 0.273) !important;
+    transition: all 0.5s linear;
+  }
+  .product {
+    margin-top: 2%;
+    img {
+      max-height: 400px;
+      width: 100%;
+    }
+  }
+}
+
+.extra {
+  overflow: hidden;
+  .img-top:hover {
+    overflow: hidden;
+    transform: scale(1.1) !important;
+    transition: all 0.2 ease-in-out;
+  }
+}
