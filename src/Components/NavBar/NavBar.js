@@ -7,7 +7,7 @@ export default function NavBar () {
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light stroke">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/#">Gran Mate Gourmet</a>
+          <a className="navbar-brand" href="/#" id='logo'><img src="assets/images/logo.png" alt=""/></a>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
           </button>

@@ -40,7 +40,7 @@ section {
 
 nav {
   margin: 0 auto;
-  background: #fff;
+  background: white;
   padding: 50px 0;
   box-shadow: 0px 5px 0px #dedede;
 
@@ -126,6 +126,9 @@ nav {
   width: 60%;
   padding-bottom: 0;
 }
+#logo{
+  width: 20%;
+}
 
 @media screen and (min-width: 992px) {
   .navbar .nav-item .nav-link {
@@ -144,3 +147,4 @@ nav {
     width: 8%;
   }
 }
+

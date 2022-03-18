@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik&display=swap");
 body {
   background: #caf4c1;
   background: radial-gradient(circle, #caf4c1 0%, #09791a 100%, #00d4ff 100%);
@@ -44,7 +45,7 @@ section {
 /* NAVIGATION */
 nav {
   margin: 0 auto;
-  background: #fff;
+  background: white;
   padding: 50px 0;
   -webkit-box-shadow: 0px 5px 0px #dedede;
           box-shadow: 0px 5px 0px #dedede;
@@ -133,6 +134,10 @@ nav.fill ul li a:hover:after {
   padding-bottom: 0;
 }
 
+#logo {
+  width: 20%;
+}
+
 @media screen and (min-width: 992px) {
   .navbar .nav-item .nav-link {
     padding-top: 20px;
@@ -181,5 +186,38 @@ nav.fill ul li a:hover:after {
           transform: scale(1.1) !important;
   -webkit-transition: all 0.2 ease-in-out;
   transition: all 0.2 ease-in-out;
+}
+
+.container-fluid-footer {
+  overflow: hidden;
+  margin-top: 250px;
+  background: #262626;
+  color: #627482 !important;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+small {
+  font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+.bold-text {
+  color: #989c9e !important;
+}
+
+.mt-55 {
+  margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+h3 {
+  font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important;
+}
+
+.social {
+  font-size: 21px !important;
+}
+
+.rights {
+  font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important;
 }
 /*# sourceMappingURL=styles.css.map */
