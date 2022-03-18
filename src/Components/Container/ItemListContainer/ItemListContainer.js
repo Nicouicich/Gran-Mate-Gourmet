@@ -1,7 +1,7 @@
 import React from "react";
-import ItemList from "../Item/ItemList";
+import ItemList from "../../Item/ItemList";
 import { useState, useEffect } from "react";
-import { getProducts } from '../Utils/Items/items'
+import { getProducts } from '../../Utils/Items/items'
 
 
 export default function ItemListContainer () {
