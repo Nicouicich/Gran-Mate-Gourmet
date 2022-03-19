@@ -7,12 +7,11 @@ export default function ItemDetailContainer () {
 
   const [product, setProduct]=useState({})
 
-  const {productoId} = useParams()
+  const { productoId }=useParams()
 
-
+  console.log(productoId)
 
   useEffect(() => {
-    
     getProducts
       .then(resp => setProduct(resp.find(prod => prod.id==productoId)))
       .catch(err => console.log(err))

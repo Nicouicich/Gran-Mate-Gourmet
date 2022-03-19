@@ -69,8 +69,8 @@ export default function ItemCount ({ stock, initial, varieties, id }) {
             <option key={variety} value={variety}>{variety}</option>
           ))}
         </select>
-        <Link to={`detalle/${id}`}>
-          <button type="" className="btn btn-outline-secondary">Detalles</button>
+        <Link to={`/detalle/${id}`}>
+          <button type="" className="btn btn-outline-secondary details">Detalles</button>
 
         </Link>
 

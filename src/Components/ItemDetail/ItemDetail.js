@@ -6,7 +6,7 @@ export default function ItemDetail ({ product }) {
     <>
       <p>{product.description}</p>
       <div className="extra">
-        <img src={product.pictureUrl} className="img-top" alt="" />
+        <img src={product.pictureUrl} className="img-top" alt="foto" />
       </div>
       <div>
         <h4>{product.price}</h4>
