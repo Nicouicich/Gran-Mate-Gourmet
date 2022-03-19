@@ -610,4 +610,9 @@ nav.fill ul li a:hover:after {
   background: #fa6742;
   border-color: #fa6742;
 }
+
+.select-option {
+  margin-right: 20px;
+  padding: 8px;
+}
 /*# sourceMappingURL=styles.css.map */

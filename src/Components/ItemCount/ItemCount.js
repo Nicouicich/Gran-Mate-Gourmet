@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import '../../Styles/styles.css';
+import { Link } from "react-router-dom";
 
 
-
-export default function ItemCount ({ stock, initial, varieties }) {
+export default function ItemCount ({ stock, initial, varieties, id }) {
   const [count, setCount]=useState(parseInt(initial))
   const [disableCart, setDisableCart]=useState(true);
   const [disableSub, setDisableSub]=useState(true);
@@ -54,12 +54,14 @@ export default function ItemCount ({ stock, initial, varieties }) {
 
     <>
       <div>
-        <select
-          onChange={e => { console.log(e.target.value);
-          if( stock!== 0)
-            setDisableCart(false); 
-          setDisableAdd(false); 
-          setDisableSub(false) }}>
+        <select className="select-option btn-outline-secondary"
+          onChange={e => {
+            console.log(e.target.value);
+            if (stock!==0)
+              setDisableCart(false);
+            setDisableAdd(false);
+            setDisableSub(false)
+          }}>
 
           <option value={-1} disabled selected>Seleccione una variedad</option>
 
@@ -67,6 +69,10 @@ export default function ItemCount ({ stock, initial, varieties }) {
             <option key={variety} value={variety}>{variety}</option>
           ))}
         </select>
+        <Link to={`detalle/${id}`}>
+          <button type="" className="btn btn-outline-secondary">Detalles</button>
+
+        </Link>
 
       </div>
       <div>

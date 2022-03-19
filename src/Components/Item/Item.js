@@ -1,12 +1,8 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
+import { Link } from 'react-router-dom';
 
 export default function Item ({product}) {
-
-
-
-
-
 
   return (
     <div className="col-md-4 product">
@@ -22,8 +18,9 @@ export default function Item ({product}) {
 
           <p>{product.description}</p>
         </div>
+ 
         <div>
-          <p><ItemCount stock={product.stock} initial="1"  varieties={product.varieties}/></p>
+          <p><ItemCount stock={product.stock} initial="1"  varieties={product.varieties} id = {product.id}/></p>
         </div>
       </div>
     </div>
