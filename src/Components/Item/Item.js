@@ -1,6 +1,5 @@
 import React from "react";
 import ItemCount from "../ItemCount/ItemCount";
-import { Link } from 'react-router-dom';
 
 export default function Item ({product}) {
 

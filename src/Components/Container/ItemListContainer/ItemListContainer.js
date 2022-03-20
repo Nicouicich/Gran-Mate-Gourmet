@@ -10,12 +10,12 @@ export default function ItemListContainer () {
   const [products, setProducts]=useState([])
   const { id }=useParams()
   console.log(id)
-
+  console.log(typeof (id))
 
   useEffect(() => {
     if (id) {
       getProducts
-        .then(resp => setProducts(resp.filter(prod => prod.categoria==id)))
+        .then(resp => setProducts(resp.filter(prod => prod.categoria===id)))
         .catch(err => console.log(err))
     } else {
       getProducts

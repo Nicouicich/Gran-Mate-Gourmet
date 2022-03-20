@@ -1,16 +1,16 @@
 import React from 'react';
 import '../../Styles/styles.css'
 import CartWidget from '../CartWidget/CartWidget';
-import { Navigate, NavLink } from 'react-router-dom';
+import {  NavLink } from 'react-router-dom';
 
 export default function NavBar () {
   return (
     <>
-      <nav className="navbar navbar-expand-lg navbar-light stroke">
+      <nav className="navbar navbar-expand-lg bg-light navbar-light stroke">
         <div className="container-fluid">
           <NavLink to="/">
 
-            <img src="/assets/images/logo.png" alt="logo" />
+            <img src="/assets/images/logo.svg" alt="logo" />
           </NavLink>
           <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

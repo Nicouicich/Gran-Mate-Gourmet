@@ -13,7 +13,7 @@ export default function ItemDetailContainer () {
 
   useEffect(() => {
     getProducts
-      .then(resp => setProduct(resp.find(prod => prod.id==productoId)))
+      .then(resp => setProduct(resp.find(prod => prod.id=== parseInt( productoId))))
       .catch(err => console.log(err))
   }, [productoId])
 

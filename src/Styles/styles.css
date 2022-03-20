@@ -131,12 +131,22 @@ nav.fill ul li a:hover:after {
 /* stroke */
 /* -- */
 .navbar img {
-  width: 60%;
+  width: 100%;
   padding-bottom: 0;
 }
 
 #logo {
   width: 20%;
+}
+
+@media screen and (min-width: 992px) {
+  .navbar img {
+    width: 70%;
+    padding-bottom: 0;
+  }
+  #logo {
+    width: 20%;
+  }
 }
 
 @media screen and (min-width: 992px) {
