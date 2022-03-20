@@ -624,12 +624,20 @@ nav.fill ul li a:hover:after {
 }
 
 .select-option {
-  margin-right: 30px;
-  height: 39px;
+  margin-right: 4%;
+  height: 40px;
   border-radius: 0.25rem;
 }
 
 .details {
   height: 40px;
+  margin-top: -4px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .details {
+    height: 40px;
+    margin-top: 3%;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
