@@ -64,7 +64,7 @@ export default function Footer () {
                   <div className="contact-us">
 
                     <div className="contact-info">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1551.393279171088!2d-68.077917333268!3d-38.951704250836016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33b9f0e69fd5%3A0x78da4376f323362b!2sJulio%20Argentino%20Roca%201295%2C%20Q8300%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1647630881546!5m2!1ses-419!2sar" width="400" height="300" style={{"border-radius" : "25px "}} allowfullscreen="" loading="lazy" title ="Ubicación"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1551.393279171088!2d-68.077917333268!3d-38.951704250836016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33b9f0e69fd5%3A0x78da4376f323362b!2sJulio%20Argentino%20Roca%201295%2C%20Q8300%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1647630881546!5m2!1ses-419!2sar" width="400" height="300" style={{"borderRadius" : "25px "}} allowFullScreen="" loading="lazy" title ="Ubicación"></iframe>
                     </div>
                   </div>
                 </div>

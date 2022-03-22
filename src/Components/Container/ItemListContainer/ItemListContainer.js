@@ -9,8 +9,6 @@ export default function ItemListContainer () {
 
   const [products, setProducts]=useState([])
   const { id }=useParams()
-  console.log(id)
-  console.log(typeof (id))
 
   useEffect(() => {
     if (id) {
@@ -27,6 +25,7 @@ export default function ItemListContainer () {
   return (
     <>
       <ItemList products={products} />
+      
     </>
   )
 }

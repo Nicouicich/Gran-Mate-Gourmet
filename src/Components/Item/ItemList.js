@@ -12,7 +12,7 @@ export default function ItemList ({products}) {
         <div className="row box-shadow ">
           
           {products.map((product) =>
-            <Item product = {product} />
+            <Item product = {product} key ={product.id}/>
           )}
         </div>
       </div>
