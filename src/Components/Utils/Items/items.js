@@ -12,7 +12,7 @@ export const getProducts = new Promise ((resolve,reject) => {
   if (condition){
     setTimeout(() =>{
       resolve(products)
-    }, 3000)
+    }, 1000)
   }
   else
     reject("400")

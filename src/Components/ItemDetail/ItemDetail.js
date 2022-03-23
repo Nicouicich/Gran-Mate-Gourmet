@@ -14,13 +14,13 @@ export default function ItemDetail({ product }) {
         <p>{product.description}</p>
       </div> */}
 
-      <div className='container d-flex justify-content-center align-items-center h-100 text-center '>
-        <div className='box-shadow '>
-          <div className='product'>
-            <div className='card '>
-              <div className='card-body'>{product.title}</div>
-              <div className='extra'>
-                <img src={product.pictureUrl} className='img-top' alt='' />
+      <div className="container d-flex justify-content-center align-items-center h-100 text-center ">
+        <div className="box-shadow ">
+          <div className="product">
+            <div className="card ">
+              <div className="card-body">{product.title}</div>
+              <div className="extra">
+                <img src={product.pictureUrl} className="img-top" alt="" />
               </div>
               <div>
                 <h4>{product.price}</h4>
@@ -29,7 +29,7 @@ export default function ItemDetail({ product }) {
               </div>
 
               <div>
-                <ItemCount stock={product.stock} initial='1' varieties={product.varieties} id={product.id} />
+                <ItemCount stock={product.stock} varieties={product.varieties} id={product.id} />
               </div>
             </div>
           </div>

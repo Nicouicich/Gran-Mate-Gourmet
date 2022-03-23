@@ -6,13 +6,13 @@ import { useParams } from "react-router-dom";
 export default function ItemDetailContainer () {
 
   const [product, setProduct]=useState({})
-
+  
   const { productoId }=useParams()
 
-  console.log(typeof(parseInt(productoId)))
+
   useEffect(() => {
     getProducts
-      .then(resp => setProduct(resp.find(prod => parseInt(prod.id)=== parseInt( productoId))))
+      .then(resp => setProduct(resp.find( prod =>  prod.id ==  productoId)))
       .catch(err => console.log(err))
   }, [productoId])
 

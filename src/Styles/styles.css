@@ -640,4 +640,8 @@ nav.fill ul li a:hover:after {
     margin-top: 3%;
   }
 }
+
+#add-to-cart, #select-variety {
+  margin: 3% 0 5% 0;
+}
 /*# sourceMappingURL=styles.css.map */

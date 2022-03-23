@@ -10,6 +10,7 @@ export default function ItemListContainer () {
   const [products, setProducts]=useState([])
   const { id }=useParams()
 
+
   useEffect(() => {
     if (id) {
       getProducts

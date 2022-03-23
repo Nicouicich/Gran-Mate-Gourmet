@@ -19,7 +19,7 @@ export default function Item ({product}) {
         </div>
  
         <div>
-          <p><ItemCount stock={product.stock} initial="1"  varieties={product.varieties} id = {product.id}/></p>
+          <ItemCount stock={product.stock} initial="1"  varieties={product.varieties} id = {product.id}/>
         </div>
       </div>
     </div>
