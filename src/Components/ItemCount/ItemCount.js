@@ -36,6 +36,14 @@ export default function ItemCount ({ stock, varieties, id }) {
     setStockRenew(stockRenew)
   }, [stockRenew] )
 
+
+  useEffect (() => {
+    if(stock)
+      setStockRenew(stock)
+  }, [stock])
+
+
+
   return (
 
     <>
@@ -56,7 +64,7 @@ export default function ItemCount ({ stock, varieties, id }) {
       <div>
         {console.log(stockRenew)}
 
-        <label htmlFor=""> Stock: {stockRenew} </label>
+        <label> Stock: {stockRenew} </label>
       </div>
       <div className="btn-count">
         <button className="btn btn-outline-secondary rounded-0 btn-sm" onClick={subtractCount}>-</button>
