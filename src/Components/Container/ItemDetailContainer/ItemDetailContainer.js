@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { getProducts } from "../../Utils/Items/items";
 import ItemDetail from "../../ItemDetail/ItemDetail";
 import { useParams } from "react-router-dom";
+import {getProducts} from "../../../utils/Items/items"
 
 export default function ItemDetailContainer () {
 
   const [product, setProduct]=useState({})
-  
   const { productoId }=useParams()
 
 
@@ -19,9 +18,7 @@ export default function ItemDetailContainer () {
 
   return (
     <div>
-      <ItemDetail product={product} />
+      <ItemDetail product={product}/>
     </div>
-
   )
-
 }

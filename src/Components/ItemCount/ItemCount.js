@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../../Styles/styles.css';
 import { Link } from "react-router-dom";
 
-export default function ItemCount ({ stock, varieties, id }) {
+export default function ItemCount ({ stock, varieties, id , onAdd}) {
   const [count, setCount]=useState(1)
   const [disableCart, setDisableCart]=useState(false);
   const [stockRenew, setStockRenew]=useState(stock)
@@ -29,7 +29,9 @@ export default function ItemCount ({ stock, varieties, id }) {
   
 
   const addCart=() => {
+    onAdd(count)
     setStockRenew(stockRenew-count)
+    setAddedToCart(true)
   }
 
   useEffect (()=> {
@@ -42,6 +44,18 @@ export default function ItemCount ({ stock, varieties, id }) {
       setStockRenew(stock)
   }, [stock])
 
+
+
+  const [addedToCart, setAddedToCart] = useState(false)
+  
+
+  const AddButtonCart  = ( {handleBtn}) => {
+    return (
+    <Link to="/carrito" >
+      <button className="btn btn-outline-secondary buy-product" onClick={handleBtn} style= {{display: addedToCart? "active" : "none"}}>Terminar compra</button>
+    </Link>
+    )
+  } 
 
 
   return (
@@ -59,10 +73,8 @@ export default function ItemCount ({ stock, varieties, id }) {
           <button type="" className="btn btn-outline-secondary details" >Detalles</button>
         </Link>
         
-
       </div>
       <div>
-        {console.log(stockRenew)}
 
         <label> Stock: {stockRenew} </label>
       </div>
@@ -73,6 +85,7 @@ export default function ItemCount ({ stock, varieties, id }) {
       </div>
       <div>
         <button className="btn  btn-success" id="add-to-cart" onClick={addCart} disabled={disableCart}>Agregar al Carrito</button>
+        {<AddButtonCart />}
       </div>
       
 

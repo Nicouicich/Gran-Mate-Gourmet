@@ -2,8 +2,8 @@ import React from "react";
 import '../../Styles/styles.css'
 import Item from './Item'
 
-export default function ItemList ({products}) {
 
+export default function ItemList ({products}) {
 
 
   return (
