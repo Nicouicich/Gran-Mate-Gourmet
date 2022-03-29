@@ -1,11 +1,15 @@
-import React, { useEffect, useState } from "react";
-import '../../Styles/styles.css';
+import React, { useContext, useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import DetailsBtn from "../DetailsBtn/DetailsBtn";
+import '../../Styles/styles.css';
+
 
 export default function ItemCount ({ stock, varieties, id , onAdd}) {
   const [count, setCount]=useState(1)
   const [disableCart, setDisableCart]=useState(false);
   const [stockRenew, setStockRenew]=useState(stock)
+
+
 
 
   const subtractCount=() => {
@@ -69,9 +73,7 @@ export default function ItemCount ({ stock, varieties, id , onAdd}) {
           ))}
 
         </select>
-        <Link to={`/detalle/${id}`}>
-          <button type="" className="btn btn-outline-secondary details" >Detalles</button>
-        </Link>
+        <DetailsBtn id = {id}/>
         
       </div>
       <div>

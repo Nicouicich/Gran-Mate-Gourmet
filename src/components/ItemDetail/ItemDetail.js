@@ -1,12 +1,14 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import { useCartContext } from '../../context/CartContext/CartContext'
+
 
 export default function ItemDetail({ product }) {
+  const { addToCart, cartList } = useCartContext()
 
   const onAdd = (cant) => {
-   console.log(cant)
+    addToCart({ ...product, cant: cant })
   }
-
   return (
     <>
       <div className='container d-flex justify-content-center align-items-center h-100 text-center '>

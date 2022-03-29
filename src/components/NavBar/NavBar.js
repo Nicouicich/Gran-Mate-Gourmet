@@ -28,9 +28,11 @@ export default function NavBar() {
             id='navbarNav'
           >
             <ul className='navbar-nav'>
-              <NavLink to='/' className='nav-link'>
-                Ofertas
-              </NavLink>
+              <li className='nav-item'>
+                <NavLink to='/' className='nav-link'>
+                  Ofertas
+                </NavLink>
+              </li>
               <li className='nav-item'>
                 <NavLink to='/categoria/mate' className='nav-link'>
                   Mates
