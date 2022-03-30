@@ -1,11 +1,14 @@
 import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
+import { useCartContext } from '../../context/CartContext/CartContext'
 
 export default function Item({ product }) {
-  const onAdd = (cant) => {
-    console.log(cant)
-  }
+  const { addToCart } = useCartContext()
 
+  const onAdd = (cant) => {
+    addToCart({ ...product, cant: cant })
+  }
+  
   return (
     <div className='col-md-4 product'>
       <div className='card '>
