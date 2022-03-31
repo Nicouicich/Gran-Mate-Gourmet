@@ -9,19 +9,13 @@ export default function CartContextProvider ({ children }) {
   const [cartList, setCartList]=useState([])
   const [totalPrice, setTotalPrice]=useState(0)
 
-
   useEffect(() => {
     let price=0
     if (cartList.length) {
-      for (let prod of cartList)
-        price+=(prod.cant*prod.price)
+      for (let prod of cartList) price+=prod.cant*prod.price
     }
     setTotalPrice(price)
-    console.log("Precio", price)
-
   }, [cartList])
-
-
 
   const addToCart=(product) => {
     const found=cartList.find((prod) => prod.id==product.id)
@@ -33,7 +27,6 @@ export default function CartContextProvider ({ children }) {
         return prod
       })
       setCartList(arr)
-      console.log(arr)
     } else setCartList([...cartList, product])
   }
 
@@ -41,12 +34,27 @@ export default function CartContextProvider ({ children }) {
     setCartList([])
   }
 
-  const addProduct = () => {
-
+  const sumProduct=(id) => {
+    let arr=cartList.map((prod) => {
+      prod.cant=
+        prod.id==id? prod.cant+1:prod.cant
+      return prod
+    })
+    setCartList(arr)
   }
 
-  const removeProduct = () => {
+  const subProduct=(id) => {
 
+    let arr=cartList.map((prod) => {
+      prod.cant=
+        prod.id==id? prod.cant-1: prod.cant
+      return prod
+    })
+    setCartList(arr)
+  }
+
+  const removeProduct=(id) => {
+    setCartList(cartList.filter(item => item.id != id))
   }
 
   return (
@@ -56,10 +64,10 @@ export default function CartContextProvider ({ children }) {
         totalPrice,
         addToCart,
         emptyCart,
-        addProduct,
-        removeProduct
-      }}
-    >
+        removeProduct,
+        subProduct,
+        sumProduct
+      }}>
       {children}
     </CartContext.Provider>
   )

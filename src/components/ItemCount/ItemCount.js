@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import DetailsBtn from "../DetailsBtn/DetailsBtn";
 import '../../Styles/styles.css';

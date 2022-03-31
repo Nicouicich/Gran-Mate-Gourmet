@@ -27,7 +27,7 @@ export default function CartWidget() {
 
             <div className='container container-cart'>
               <div className='row'>
-                <div className='col-1'>Producto</div>
+                <div className='col-2'>Producto</div>
                 <div className='col'>Descripcion</div>
                 <div className='col'>Cantidad</div>
                 <div className='col'>Precio Unitario</div>

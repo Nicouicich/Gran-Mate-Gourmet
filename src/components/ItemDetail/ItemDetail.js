@@ -4,7 +4,7 @@ import { useCartContext } from '../../context/CartContext/CartContext'
 
 
 export default function ItemDetail({ product }) {
-  const { addToCart, cartList } = useCartContext()
+  const { addToCart } = useCartContext()
 
   const onAdd = (cant) => {
     addToCart({ ...product, cant: cant })

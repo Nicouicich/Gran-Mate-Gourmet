@@ -1,28 +1,44 @@
 .select-option {
-  margin-right:4%;
+  margin-right: 4%;
   height: 40px;
   border-radius: 0.25rem;
-
 }
 .details {
   height: 40px;
   margin-top: -4px;
 }
-@media screen and (min-width:768px) and ( max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 992px) {
   .details {
     height: 40px;
     margin-top: 3%;
   }
 }
 
-#add-to-cart, #select-variety {
-  margin:3% 0 5% 0;
+#add-to-cart,
+#select-variety {
+  margin: 3% 0 5% 0;
 }
 
 .buy-product {
   margin-top: -10px;
-  margin-left: 25px
+  margin-left: 25px;
 }
-#bin img {
-  max-width: 15%;
+#bin {
+  img {
+    max-width: 20%;
+
+  }
+}
+
+.btnCart {
+  border:1px solid #ddd;
+  border-radius:10px;
+  max-width: 70%;
+  .btn-izq {
+    margin-right: 20%;
+  }
+  .btn-der {
+    margin-left: 15%;
+  }
+
 }
