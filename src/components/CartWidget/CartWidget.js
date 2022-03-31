@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { useCartContext } from '../../context/CartContext/CartContext'
 import '../../Styles/styles.css'
 import CartProduct from './CartProduct'
@@ -6,6 +6,14 @@ import CartSummary from './CartSummary'
 
 export default function CartWidget() {
   const { cartList, emptyCart } = useCartContext()
+  const [emptyBtn, setEmptyBtn] = useState(false)
+
+  useEffect (() => {
+    if(cartList.length)
+      setEmptyBtn(true)
+    else
+      setEmptyBtn(false)
+  }, [cartList])
 
   return (
     <>
@@ -44,7 +52,7 @@ export default function CartWidget() {
               <button
                 type='button'
                 className='btn btn-outline-dark'
-                onClick={emptyCart}>
+                onClick={emptyCart} style ={{"visibility": emptyBtn ? "visible": "hidden"}}>
                 Limpiar Carrito
               </button>
             </div>

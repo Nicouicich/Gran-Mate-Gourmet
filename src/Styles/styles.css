@@ -824,6 +824,9 @@ nav.fill ul li a:hover:after {
   box-shadow: none;
   color: white;
   -webkit-box-shadow: none;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   -webkit-transition: none;
   transition: none;
