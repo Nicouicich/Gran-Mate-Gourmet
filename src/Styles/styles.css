@@ -658,7 +658,7 @@ nav.fill ul li a:hover:after {
 .btnCart {
   border: 1px solid #ddd;
   border-radius: 10px;
-  max-width: 70%;
+  max-width: 80%;
 }
 
 .btnCart .btn-izq {
