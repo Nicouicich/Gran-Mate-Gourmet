@@ -671,6 +671,7 @@ nav.fill ul li a:hover:after {
 
 .cartWidget {
   margin: 3% 2% 3% 2%;
+  position: relative;
 }
 
 .cartWidget body {
@@ -857,5 +858,19 @@ nav.fill ul li a:hover:after {
   text-align: right;
   margin-top: 2%;
   margin-bottom: 0;
+}
+
+.cartWidget .left-arrow {
+  position: absolute;
+  bottom: 5%;
+  left: 2%;
+  width: 3%;
+}
+
+.cartWidget .empty-cart {
+  position: absolute;
+  left: 28%;
+  bottom: 50%;
+  color: #9ca29d;
 }
 /*# sourceMappingURL=styles.css.map */
