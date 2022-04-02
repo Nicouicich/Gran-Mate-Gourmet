@@ -24,7 +24,7 @@ export default function CartProduct({ product }) {
     <>
       <div className='row border-top border-bottom'>
         <div className='row main align-items-center'>
-          <div className='col-2'>
+          <div className='col-1 col-picture'>
             <img className='img-fluid' src={product.pictureUrl} alt='' />
           </div>
           <div className='col'>

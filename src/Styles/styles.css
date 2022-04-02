@@ -669,6 +669,10 @@ nav.fill ul li a:hover:after {
   margin-left: 15%;
 }
 
+.col-product, .col-picture {
+  margin-right: 3% !important;
+}
+
 .cartWidget {
   margin: 3% 2% 3% 2%;
   position: relative;
