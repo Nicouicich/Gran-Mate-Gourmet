@@ -57,7 +57,7 @@ export default function CartWidget() {
                 className='btn btn-outline-dark'
                 onClick={emptyCart}
                 style={{ visibility: emptyBtn ? 'visible' : 'hidden' }}>
-                Limpiar Carrito
+                Vaciar Carrito
               </button>
             </div>
             <div>

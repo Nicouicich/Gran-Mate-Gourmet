@@ -2,7 +2,6 @@ import React from 'react'
 import ItemCount from '../ItemCount/ItemCount'
 import { useCartContext } from '../../context/CartContext/CartContext'
 
-
 export default function ItemDetail({ product }) {
   const { addToCart } = useCartContext()
 
@@ -20,7 +19,7 @@ export default function ItemDetail({ product }) {
                 <img src={product.pictureUrl} className='img-top' alt='' />
               </div>
               <div>
-                <h4>{product.price}</h4>
+                <h4>${product.price}</h4>
 
                 <p>{product.description}</p>
               </div>

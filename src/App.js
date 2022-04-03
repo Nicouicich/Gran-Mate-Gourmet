@@ -6,6 +6,9 @@ import ItemDetailContainer from './components/container/ItemDetailContainer/Item
 import './Styles/styles.css'
 import CartWidget from './components/CartWidget/CartWidget'
 import CartContextProvider from './context/CartContext/CartContext'
+import { getFirestoreApp } from './firebase/config'
+
+
 
 function App() {
   return (

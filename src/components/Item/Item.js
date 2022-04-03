@@ -17,7 +17,7 @@ export default function Item({ product }) {
           <img src={product.pictureUrl} className='img-top' alt='' />
         </div>
         <div>
-          <h4>{product.price}</h4>
+          <h4>${product.price}</h4>
 
           <p>{product.description}</p>
         </div>
