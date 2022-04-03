@@ -1,16 +1,14 @@
 import React from 'react'
 import ItemList from '../../Item/ItemList'
 import { useState, useEffect } from 'react'
-import { getProducts } from '../../../utils/Items/items'
 import { useParams } from 'react-router-dom'
-import { doc, getDocs, collection, getFirestore } from 'firebase/firestore'
+import { getDocs, collection, getFirestore,query, where } from 'firebase/firestore'
 
 
 
 export default function ItemListContainer() {
   const [products, setProducts] = useState([])
-  const { id } = useParams()
-  const [prod, setProd] = useState({})
+  const { categoriaId } = useParams()
 
   // useEffect(() => {
   //   getProducts
@@ -32,11 +30,20 @@ export default function ItemListContainer() {
   useEffect(() => {
     const db = getFirestore()
     const queryCollection = collection(db,'productos')
-    getDocs(queryCollection)
-    .then(resp => setProducts(resp.docs.map (prod => ({id: prod.id, ...prod.data()})) ) )
-  }, [id])
+    
+    if (categoriaId){ //aca esta el filtro por categoria
+      const queryFilter = query(queryCollection,where ('categoria', '==', categoriaId))
+      getDocs(queryFilter)
+      .then(resp => setProducts(resp.docs.map(prod => ({id: prod.id, ...prod.data()}))))
+    }
+    else{ //si no tiene una categoria devuelvo todos los productos
 
-  console.log(prod)
+      getDocs(queryCollection)
+      .then(resp => setProducts(resp.docs.map (prod => ({id: prod.id, ...prod.data()})) ) )
+    }
+
+  }, [categoriaId])
+
   return (
     <>
       <ItemList products={products} />
