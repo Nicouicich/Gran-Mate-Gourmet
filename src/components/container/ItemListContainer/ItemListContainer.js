@@ -10,23 +10,6 @@ export default function ItemListContainer() {
   const [products, setProducts] = useState([])
   const { categoriaId } = useParams()
 
-  // useEffect(() => {
-  //   getProducts
-  //     .then((resp) =>
-  //       id
-  //         ? setProducts(resp.filter((prod) => prod.categoria === id))
-  //         : setProducts(resp)
-  //     )
-  //     .catch((err) => console.log(err))
-  // }, [id])
-
-  // useEffect(() => {
-  //   const db = getFirestore()
-  //   const queryDoc = doc(db,'productos', 'AYsnGhhjsW4s4fIcb18W')
-  //   getDoc(queryDoc)
-  //   .then(resp => setProd({id:resp.id, ...resp.data()}))
-  // }, [id])
-
   useEffect(() => {
     const db = getFirestore()
     const queryCollection = collection(db,'productos')

@@ -1,6 +1,7 @@
 body {
-  background: #caf4c1;
-  background: radial-gradient(circle, #caf4c1 0%, #09791a 100%, #00d4ff 100%);
+  background-image: url("../../public/assets/images/fondo mate.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /* NAVIGATION */

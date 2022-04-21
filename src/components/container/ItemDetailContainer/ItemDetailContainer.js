@@ -9,23 +9,6 @@ export default function ItemDetailContainer() {
   const [product, setProduct] = useState({})
   const { productoId } = useParams()
 
-  // useEffect(() => {
-  //   getProducts
-  //     .then((resp) => setProduct(resp.find((prod) => prod.id == productoId)))
-  //     .catch((err) => console.log(err))
-  // }, [productoId])
-
-
-  // useEffect(() => {
-  //   const db = getFirestore()
-  //   const queryCollection = collection(db,'productos')
-  //   const queryFilter = query(queryCollection, where('id', '==', parseInt(productoId)))
-
-  //   getDocs(queryFilter)
-  //   .then((resp) =>setProduct(resp.docs[0].data()) )
-  //   .catch(err => console.log(err))
-  // }, [productoId])
-
   useEffect(() => {
     const db = getFirestore()
     const queryDoc = doc(db,'productos',productoId)
