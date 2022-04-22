@@ -8,7 +8,7 @@ export const useCartContext=() => useContext(CartContext)
 export default function CartContextProvider ({ children }) {
   const [cartList, setCartList]=useState([])
   const [totalPrice, setTotalPrice]=useState(0)
-
+  
   useEffect(() => {
     let price=0
     if (cartList.length) {

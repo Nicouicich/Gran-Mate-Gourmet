@@ -1,6 +1,7 @@
 import React from 'react'
-import '../../Styles/styles.css'
+import CartIcon from '../CartWidget/CartIcon'
 import { NavLink } from 'react-router-dom'
+import '../../Styles/styles.css'
 
 export default function NavBar() {
   return (
@@ -47,7 +48,7 @@ export default function NavBar() {
               </li>
               <li className='nav-item'>
                 <NavLink to='/carrito'>
-                  <img src='/assets/images/cart.png' alt='logo' />
+                  <CartIcon/>
                 </NavLink>
               </li>
             </ul>
