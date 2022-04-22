@@ -8,7 +8,7 @@ import '../../Styles/styles.css'
 export default function ItemCount({ stock, varieties, id, onAdd }) {
   const [count, setCount] = useState(1)
   const [disableCart, setDisableCart] = useState(false)
-  const [stockRenew, setStockRenew] = useState(stock)
+  // const [stockRenew, setStockRenew] = useState(stock)
   const { cartList } = useCartContext()
 
   const subtractCount = () => {
@@ -22,7 +22,6 @@ export default function ItemCount({ stock, varieties, id, onAdd }) {
 
   const sumCount = () => {
     const prod = isOnList()
-    console.log(prod)
   
     if (count + prod < stock)
       setCount(count + 1)
@@ -34,17 +33,22 @@ export default function ItemCount({ stock, varieties, id, onAdd }) {
   }, [stock])
 
   const addCart = () => {
-    onAdd(count)
-    setAddedToCart(true)
+    const prod = isOnList()
+  
+    if (count + prod <= stock){
+      onAdd(count)
+      setCount(1)
+      setAddedToCart(true)
+    }
   }
 
-  useEffect(() => {
-    setStockRenew(stockRenew)
-  }, [stockRenew])
+  // useEffect(() => {
+  //   setStockRenew(stockRenew)
+  // }, [stockRenew])
 
-  useEffect(() => {
-    if (stock) setStockRenew(stock)
-  }, [stock])
+  // useEffect(() => {
+  //   if (stock) setStockRenew(stock)
+  // }, [stock])
 
   const [addedToCart, setAddedToCart] = useState(false)
 
