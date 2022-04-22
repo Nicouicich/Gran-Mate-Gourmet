@@ -16,15 +16,14 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 export default function CartIcon() {
-  const { totalProducts } = useCartContext();
+  const { cartList } = useCartContext();
 
   useEffect(() => {
-      console.log(totalProducts)
-  }, [totalProducts]);
+  }, [cartList]);
 
   return (
     <IconButton aria-label="cart">
-      <StyledBadge badgeContent={4} color="secondary">
+      <StyledBadge badgeContent={cartList?.length} color="secondary">
         <ShoppingCartIcon />
       </StyledBadge>
     </IconButton>

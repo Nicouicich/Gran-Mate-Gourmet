@@ -8,7 +8,6 @@ export const useCartContext = () => useContext(CartContext);
 export default function CartContextProvider({ children }) {
   const [cartList, setCartList] = useState([]);
   const [totalPrice, setTotalPrice] = useState(0);
-  const [totalProducts, setTotalProducts] = useState(0);
 
   useEffect(() => {
     let price = 0;
@@ -29,9 +28,7 @@ export default function CartContextProvider({ children }) {
       });
       setCartList(arr);
     } else setCartList([...cartList, product]);
-    if (cartList.length == undefined) setTotalProducts(0);
-    else setTotalProducts(cartList.length);
-    console.log("añadiendo" , totalProducts)
+
   };
  
 
@@ -64,7 +61,6 @@ export default function CartContextProvider({ children }) {
       value={{
         cartList,
         totalPrice,
-        totalProducts,
         addToCart,
         emptyCart,
         removeProduct,
