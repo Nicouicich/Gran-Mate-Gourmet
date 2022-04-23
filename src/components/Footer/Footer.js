@@ -20,11 +20,9 @@ export default function Footer () {
             <div className="col-md-12 col-lg-4">
               <div className="dk-footer-box-info">
                 <a href="index.html" className="footer-logo">
-                  <img src="images/footer_logo.png" alt="footer_logo" className="img-fluid" />
+                <img src="/assets/images/logo.svg" alt="logo" className="img-fluid" />
                 </a>
-                <p className="footer-info-text">
-                  Reference site about Lorem Ipsum, giving information on its origins, as well as a random Lipsum generator.
-                </p>
+
                 <div className="footer-social-link">
                   <h3>Follow us</h3>
                   <ul>
@@ -64,70 +62,13 @@ export default function Footer () {
                   <div className="contact-us">
 
                     <div className="contact-info">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1551.393279171088!2d-68.077917333268!3d-38.951704250836016!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33b9f0e69fd5%3A0x78da4376f323362b!2sJulio%20Argentino%20Roca%201295%2C%20Q8300%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1647630881546!5m2!1ses-419!2sar" width="400" height="300" style={{"borderRadius" : "25px "}} allowFullScreen="" loading="lazy" title ="Ubicación"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3102.7902550354!2d-68.07922488414034!3d-38.951619807774364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x960a33b9f0e69fd5%3A0x78da4376f323362b!2sJulio%20Argentino%20Roca%201295%2C%20Q8300%20Neuqu%C3%A9n!5e0!3m2!1ses-419!2sar!4v1650667346137!5m2!1ses-419!2sar" width="400" height="300" style={{"borderRadius" : "25px "}} allowFullScreen="" loading="lazy" referrerPolicy="no-referrer-when-downgrade" title ="Ubicación"></iframe>
                     </div>
                   </div>
                 </div>
 
               </div>
-              <div className="row">
-                <div className="col-md-12 col-lg-6">
-                  <div className="footer-widget footer-left-widget">
-                    <div className="section-heading">
-                      <h3>Useful Links</h3>
-                      <span className="animate-border border-black"></span>
-                    </div>
-                    <ul>
-                      <li>
-                        <a href="/#">About us</a>
-                      </li>
-                      <li>
-                        <a href="/#">Services</a>
-                      </li>
-                      <li>
-                        <a href="/#">Projects</a>
-                      </li>
-                      <li>
-                        <a href="/#">Our Team</a>
-                      </li>
-                    </ul>
-                    <ul>
-                      <li>
-                        <a href="/#">Contact us</a>
-                      </li>
-                      <li>
-                        <a href="/#">Blog</a>
-                      </li>
-                      <li>
-                        <a href="/#">Testimonials</a>
-                      </li>
-                      <li>
-                        <a href="/#">Faq</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="col-md-12 col-lg-6">
-                  <div className="footer-widget">
-                    <div className="section-heading">
-                      <h3>Subscribe</h3>
-                      <span className="animate-border border-black"></span>
-                    </div>
-                    <p>Don't miss to suscribe e to our new feeds, kindly fill the form below.
-                      Reference site about Lorem Ipsum, giving information on its origins, as well.</p>
-                    <form action="#">
-                      <div className="form-row">
-                        <div className="col dk-footer-form">
-                          <input type="email" className="form-control" placeholder="Email Address" />
-                          <button type="submit">
-                            <i className="fa fa-send"></i>
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
@@ -137,7 +78,7 @@ export default function Footer () {
           <div className="container">
             <div className="row">
               <div className="col-md-6">
-                <span>Copyright © 2022, Todos los Derechos Reservados Uicich</span>
+                <span>Copyright © 2022, Todos los Derechos Reservados</span>
               </div>
               <div className="col-md-6">
                 <div className="copyright-menu">
